@@ -2,7 +2,7 @@
 
 # Export only expliticly installed packages
 mygroups="gnome gnome-extra base-devel"
-additional_exclusions="grub linux efibootmgr intel-ucode"
+additional_exclusions="base grub linux efibootmgr intel-ucode"
 pacman_local_packages=$(pacman -Qm | awk '{printf "%s ",$1}')
 echo "excluding local packages (AUR): $pacman_local_packages"
 echo "excluding packages (as normally part of arch installation): $additional_exclusions"
